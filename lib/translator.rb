@@ -4,12 +4,12 @@ require "pry"
 
 def load_library(file_path)
   library = YAML.load_file(file_path)
-  hash = {"get_meaning": {}, "get_emoticon": {}}
+  result = {"get_meaning": {}, "get_emoticon": {}}
   library.each do |word, symbol|
-    hash["get_meaning"][symbol[1]] = word
-    hash["get_emoticon"][symbol[0]] = symbol[1]
+    result["get_meaning"][symbol[1]] = word
+    result["get_emoticon"][symbol[0]] = symbol[1]
   end
-  hash
+  result
 end
 
 def get_japanese_emoticon
