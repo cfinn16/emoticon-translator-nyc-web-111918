@@ -1,10 +1,11 @@
 # require modules here
 require "yaml"
+require "pry"
 
 def load_library(file_path)
   library = YAML.load_file(file_path)
   result = {"get_meaning": {}, "get_emoticon": {}}
-  hash 
+  library.each do | 
 end
 
 def get_japanese_emoticon
